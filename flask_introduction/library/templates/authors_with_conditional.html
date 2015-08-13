@@ -1,0 +1,12 @@
+<html>
+    <h1>This is the list of authors (with conditional):</h1>
+    <ul>
+        {% for a in authors %}
+            {% if a['id'] > 2 %}
+                <li>{{a['id']}}: {{a['name']}}</li>
+            {% else %}
+                <li><b>{{a['id']}}: {{a['name']}}</b></li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+</html>
